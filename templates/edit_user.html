@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		  <meta name="description" content="">
+		  <meta name="author" content="">
+
+		  <title>Seqelstring RPA Tool</title>
+
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		  <!-- Direct network link/ Internet necessary -->
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+			  rel="stylesheet"/>
+{#		  <link rel="stylesheet" href="JQuery/jquery-ui.css">#}
+                <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='JQuery/jquery-ui.css') }}">
+{#		  <link rel="stylesheet" href="css/edit_user.css">#}
+                        <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='JQuery/edit_user.css') }}">
+		  <!-- Adding master page -->
+		  <script src="jquery-lib.js"></script>
+		  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+		  <script type="text/javascript">
+		    $(document).ready(function(){ 
+		    $.get("master_page.html", function(data) {
+		      $("#header").html(data);
+		      });
+		  });
+		  </script>
+	  
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="eucontainer">
+
+			<h2>Edit User</h2>
+			<div id="euinputcontainer">
+				<div id="euusername">
+					<h5>User Name</h5>
+					<input type="text" class="euinputbox" placeholder="Name">		
+				</div>
+
+				<div id="eumobileno">
+					<h5>Mobile Number</h5>
+					<input type="Number" class="euinputbox" placeholder="Mobile No">
+				</div>
+				<div id="euemailid">
+					<h5>Email Id</h5>
+					<input type="Email" class="euinputbox" placeholder="Email ID">
+				</div>
+				<div id="euuserrole">
+					<h5>Role</h5>
+					<select id="euroles">
+					  <option value="0">Please select a role:</option>
+					  <option value="1">Super-Admin</option>
+					  <option value="2">Administrator</option>
+					  <option value="3">Developer</option>
+					  <option value="4">Operator</option>
+					  <option value="5">Viewer</option>
+					</select>
+				</div>
+				<div id="eutoggles">
+					<div class="euswitch">
+					  <h5>Email Notification</h5>
+					  <input type="checkbox">
+					</div>
+					<div class="euswitch">
+					  <h5>SMS Notification</h5>
+					  <input type="checkbox">
+					</div>
+				</div>
+			</div>
+
+			<div id="eubtns">
+				<button class="eubtn">Save</button>
+				<button class="eubtn">Cancel</button>
+			</div>
+			
+		</div>
+		
+
+		
+	</body>
+
+</html>

@@ -1,0 +1,274 @@
+/*#1E1F4B #4a4677 #7771a6*/
+/*#e1e2e1 #f5f5f6*/
+#node_container{
+	top: 19vh;
+	left: 15%;
+ 	position: absolute;
+ 	max-width: 85%;
+  	/*height: 81vh;*/
+	display: flex;
+	padding: 0!important;
+	overflow: hidden;
+}
+
+#canvas-container{
+	display: flex;
+	width: 75%;
+	/*background: #D3D3D3; /*#d6d4dd*/
+	background: white; /*#d6d4dd*/
+	border: solid 1px black;
+	max-height: 81vh;
+	overflow: auto;
+}
+
+#canvas{
+  /*border:2px solid black;*/
+  height: 1000vh !important;
+
+}
+
+#nodes-container{
+	display: flex;
+	width: 25%;
+	flex-direction: column;
+	background: #e1e2e1;
+	/*padding: 5px;*/
+	/*border: solid 1px black;*/
+	
+
+}
+
+#panel_head{
+	display: flex;
+	height: 13%;
+	background: #201E4D;
+	color: white; /*//#d6d4dd // //#bab8c7 #e1e2e1*/
+	font-weight: 600;
+	font-size: 40px;
+	text-transform: uppercase;
+	justify-content: space-around;
+	align-items: center;
+	border-bottom: solid 5px white;
+	border-top: solid 5px white;
+	margin-bottom: 0px;
+}
+
+.menu{
+	display: flex;
+	flex-direction: column;
+}
+
+.item{
+	border-top: 1px solid #e1e2e1;
+	overflow: hidden;
+	margin-bottom: 5px;
+	transition: all 0.8s ease;
+	padding: 0 5px;
+}
+
+.drop_btn{
+	display: flex;
+	padding: 21px 20px;
+	background: #1E1F4B;
+	color: #e1e2e1;
+	position: relative;
+	box-shadow: 6px 6px 6px #BDBDBD;
+	font-size: 21px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.drop_btn:before{
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	background: #e1e2e1;
+	right:20px;
+	bottom: -7px;
+	transform: rotate(45deg);
+	box-shadow: 6px 6px 6px #BDBDBD;
+}
+.drop_btn i{
+	display: flex;
+	margin-right: 10px;
+	font-size: 27px;
+}
+.drop_btn img{
+	display: flex;
+	width: 24%;
+	height: 3%;
+	border-radius: 4px;
+}
+.smenu{
+	display: flex;
+	flex-direction: column;
+	transition: max-height 0.3s;
+	max-height: 0;
+	transition: all 1.2s ease;
+}
+.smenu a{
+	display: flex;
+	font-size: 12px;
+	font-weight: 400;
+	padding: 16px 20px;
+	margin: 4px 0;
+	position: relative;
+	border-top: 1px solid #f5f5f6;
+	border-bottom: 1px solid #bdbdbd;
+	transition: 0.5s;
+	text-transform: uppercase;
+}
+
+.smenu a:before{
+	display: flex;
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 100%;
+	background: #1E1F4B;
+	left: 0;
+	top: 0;
+	transition: 0.3s;
+	opacity: 0;
+}
+
+/*.smenu a:hover:before{
+	opacity: 1;
+}*/
+
+#func_btn{
+	display: flex;
+	color: white;
+}
+
+#func_smenu i{
+	display: flex;
+	margin-right: 10px;
+	font-size: 21px;
+	color: #1d6f42;
+}
+
+#func_smenu a{
+	display: flex;
+	color: black;
+}
+
+.smenu a:hover{
+	display: flex;
+	background: #bdbdbd;
+	font-weight: 600;
+	left: 2px;
+}
+
+.smenu a:active{
+	display: flex;
+	background: #4F4B7C;
+	color: #d6d4dd;
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  	transform: translateY(-0.25em);
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+
+.column_right{
+	right: 1px;
+	width: 25%;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	position: absolute;
+	display: block;
+	background-color: #201E4D;
+	height: 88vh;
+	overflow-y: auto;
+}
+
+#drop_container{
+	padding: 0px;
+}
+
+.column_links{
+	color: white;
+	padding: 7px 10px;
+	text-decoration: none;
+	margin-top: 10px;
+	display: block;
+	border-bottom: 1px solid;
+	align-items: center;
+}
+
+.column_links:hover{
+	color: white;
+}
+
+.showDrop + .dropdown-container {
+	display: block !important;
+}
+
+.dropdown-container {
+	display: none;
+}
+
+.dropdown-container a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+	padding-left: 18px;
+}
+
+.dropdown-container a:hover{
+	color: white;
+}
+
+.popup{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#droppable { 
+	width: 150px; 
+	height: 150px; 
+	padding: 0.5em; 
+	float: none; 
+	margin: 10px;
+}
+
+#toolbar {
+	top: 12vh;
+	left: 15%;
+	height: 8vh;
+	max-width: 86%;
+	background-color: #201E4D;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	border: 1px solid white;
+}
+
+#toolbar a {
+	margin: 24px;
+	color: aliceblue;
+}
+
+#toolbar a img {
+	height: 25px;
+}
+
+#toolbar a span {
+	margin-left: 8px;
+	color: white;
+}

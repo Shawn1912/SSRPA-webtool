@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+
+	  <title>Seqelstring RPA Tool</title>
+	  <!-- Direct network link/ Internet necessary -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	  <!-- Direct network link/ Internet necessary -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+		  rel="stylesheet"/>
+{#	  <link rel="stylesheet" href="JQuery/jquery-ui.css">#}
+      <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='JQuery/jquery-ui.css') }}">
+
+{#	  <link rel="stylesheet" href="css/user_profile.css">#}
+      <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/user_profile.css') }}">
+
+	  <!-- Adding master page -->
+	  <script src="jquery-lib.js"></script>
+	  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	  <script type="text/javascript">
+	    $(document).ready(function(){ 
+	    $.get("/masterpage", function(data) {
+	      $("#header").html(data);
+	      });
+	  });
+	  </script>
+  
+</head>
+
+<body>
+<div id="header"></div>
+	<div class="container">
+		<a href="create_user_form.html"><button type="text" id="projbutton">Create User</button></a>
+
+		<div class="projcontainer">
+			<!-- Project tab1 -->
+			<div class="projectstabs" tab-id="tab1">
+				<div class="projdesc">
+					<h5>User Name</h5>
+					<p>User Role</p>				
+				</div>
+
+				<div class="projactions">
+					<h5>Actions</h5>
+					<div class="projicons">
+						<a href="edit_user.html"><i class="fa fa-edit">Edit</i></a>
+						<i class="fa fa-trash-o">Delete</i>
+					</div>
+				</div>
+			</div>
+
+			<!-- Process tab1 -->
+			<!-- <div class="processtabs" id="tab1">
+				<div class="processdesc">
+					<h5>Process Name</h5>
+					<p>Process 1</p>				
+				</div>
+
+				<div class="processschedule">
+					<h5>Scheduling</h5>
+						<p>12, 23 * * *</p>		
+				</div>
+
+				<div class="processactions">
+					<h5>Action</h5>
+					<div class="procicons">
+						<i class="fa fa-edit">Edit Process</i>
+						<i class="fa fa-trash-o">Delete Process</i>
+					</div>
+				</div>
+			</div> -->
+
+			<!-- Project tab2 -->
+			<div class="projectstabs" tab-id="tab1">
+				<div class="projdesc">
+					<h5>User Name</h5>
+					<p>User Role</p>				
+				</div>
+
+				<div class="projactions">
+					<h5>Actions</h5>
+					<div class="projicons">
+						<a href="edit_user.html"><i class="fa fa-edit">Edit</i></a>
+						<i class="fa fa-trash-o">Delete</i>
+					</div>
+				</div>
+			</div>
+			<!-- Process tab2 -->
+			 <!-- <div class="processtabs" id="tab2">
+				<div class="processdesc">
+					<h5>Process Name</h5>
+					<p>Process 1</p>				
+				</div>
+
+				<div class="processschedule">
+					<h5>Scheduling</h5>
+						<p>1, 2 * * *</p>
+				</div>
+
+				<div class="processactions">
+					<h5>Action</h5>
+					<div class="procicons">
+						<i class="fa fa-edit">Edit Process</i>
+						<i class="fa fa-trash-o">Delete Process</i>
+					</div>
+				</div>
+			</div> -->
+
+		</div>
+
+	</div>
+
+
+
+	<script>
+			$(document).ready(function(){
+
+			  // default initial close for process tab
+			  $(".processtabs").hide();
+
+			  //toggle process tabs open/close
+			  $(".projectstabs").click(function(){
+			  	var tabid = $(this).attr('tab-id');
+			  	$('#' + tabid).slideToggle(500);
+			  });
+			});
+	</script>
+	
+</body>
+
+</html>

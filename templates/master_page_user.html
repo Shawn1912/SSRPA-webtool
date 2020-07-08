@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Sequelstring RPA Tool</title>
+
+    <!-- <script src="JQuery/jquery.min.js"></script> -->
+
+    <!-- BOOTSTRAP CDN **REQUIRES INTERNET** -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+
+    <!-- <link rel="stylesheet" href="JQuery/jquery-ui.css"> -->
+    {#
+    <link rel="stylesheet" href="css/master_page_1.css" />
+    #}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='styles/master_page_1.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Nav for mobile view -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/dashboard" onclick="closeNav()">Dashboard</a>
+      <hr />
+      <a href="#" onclick="closeNav()">Use Case</a>
+      <hr />
+      <a href="/projectpage" onclick="closeNav()">Processes</a>
+      <hr />
+      <a href="/" onclick="closeNav()">Logout</a>
+      <hr />
+    </div>
+
+    <nav class="navbar container-fluid col-lg-12" id="toppanel">
+      <span id="hamburger" onclick="openNav()">&#9776;</span>
+      <a href="#">
+        <img
+          src="{{url_for('static', filename='assets/ss_logo.jpg')}}"
+          alt="ss_logo"
+        />
+      </a>
+      <!-- <span id="welcome_user">Welcome User!</span> -->
+      <span id="name">RPA Tool</span>
+      <a href="/" id="logout">Logout</a>
+      <img
+        src="{{url_for('static', filename='assets/MIBS Logo.png')}}"
+        id="client_logo"
+        alt="Client Logo"
+        align="right"
+      />
+    </nav>
+
+    <!-- Nav for desktop view -->
+    <nav class="navbar container-fluid col-lg-3" id="left_panel">
+      <a href="/dashboard" id="column_links">Dashboard</a>
+      <a href="/projectpage" id="column_links">Processes</a>
+      <a href="#" id="column_links">Logs</a>
+      <a href="/nodespage" id="column_links">Nodes</a>
+      <a href="#" id="column_links">Knowledge Bank</a>
+    </nav>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+
+    <!-- <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script> -->
+
+    <script type="text/javascript">
+      // let navbarHt=document.getElementById("toppanel").clientHeight;
+      // let sidebar=document.getElementById("left_panel");
+      // sidebar.style.top=navbarHt+"px";
+      // console.log(navbarHt);
+
+      // let main_body=document.getElementById("node_container");
+      // let sidebar_width=document.getElementById("left_panel").clientWidth;
+      // main_body.style.top=navbarHt+"px";
+      // main_body.style.left=sidebar_width+"px";
+      // console.log(sidebar_width);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(120deg, #EEEEEE, #EEEEEE);
+  min-height: 100vh;
+}
+
+.container{
+  top: 97px;
+  left: 205px;
+  position: absolute;
+  width: 85%;
+  height: 84%;
+  background-color: #FFFFFF;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#projbutton{
+    display: flex;
+    width: 160px;
+    padding: 10px;
+    justify-content: center;
+    background: #1E1F4B;
+    color: #EEEEEE;
+    margin-bottom: 5px;
+    border: 2px solid #EEEEEE;
+    border-radius: 8px;
+    height: 7vh;
+    font-size: 15px;
+    transition: 0.3s;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #BDBDBD;
+}
+
+#projbutton:hover {
+  background-color: #EEEEEE;
+  color: #1E1F4B;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  border: 2px solid #1E1F4B; 
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #BDBDBD;
+  text-decoration-line: none;
+}
+
+#projbutton::after {
+  display: none;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(30,31,75, 0.3);
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  /* Center the ripple */
+  top: 50%;
+  left: 50%;
+  animation: ripple 1.5s;
+  opacity: 0;
+}
+
+#projbutton:focus:not(:active)::after {
+  display: flex;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(10);
+  }
+}
+h5{
+  margin: 10px 0;
+}
+
+.projcontainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.projectstabs{
+  width: 100%;
+  display: flex;
+  background: #FFFFFF;
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px #BDBDBD;
+  justify-content: space-between;
+  border: 1px solid;
+
+}
+
+.projactions i, .processactions i{
+  cursor: pointer;
+}
+
+.projactions{
+  width: 30%;
+}
+
+.procicons{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.projicons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+h5{
+  font-weight: 500;
+  
+}
+
+p{
+  font-weight: 100;
+}
+
+.processtabs{
+  width: 98%;
+  display: flex;
+  background: #ffffff;
+  padding: 18px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  opacity:0.8;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+
+.processdesc{
+
+}
+
+.processschedule{
+ 
+}
+
+.processactions{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.procicons{
+  display: flex;
+  justify-content: space-between;
+}
+

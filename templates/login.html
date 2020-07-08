@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Seqelstring RPA Tool</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- BOOTSTRAP CDN **REQUIRES INTERNET** -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+
+    <link rel="stylesheet" href="css/login.css" />
+              <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/login.css') }}">
+  </head>
+
+  <body style="background-image: url(assets/justice-league.jpg);">
+    <div class="container" id="logincontainer">
+      <img src="assets/ss_logo.jpg" id="loginimagelogo" style="width: 65%;" />
+      <form>
+        <div class="form-group" id="loginusername">
+          <label for="email">Username:</label>
+          <input
+            type="email"
+            class="form-control logininputbox"
+            id="loginusername"
+            placeholder="Username"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input
+            type="password"
+            class="form-control logininputbox"
+            id="loginpwd"
+            placeholder="Enter password"
+            name="pswd"
+          />
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember" />
+            Remember me
+          </label>
+          <a
+            href="#"
+            style="margin-left: 15%; text-decoration: none; color: black;"
+            >Forgot Password?</a
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary loginbtn">Login</button>
+      </form>
+    </div>
+  </body>
+</html>

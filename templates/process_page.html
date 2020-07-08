@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- to render all kinds of pages  -->
+
+	<!-- BOOTSTRAP CDN **REQUIRES INTERNET** -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- jQuery library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><!-- Popper JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script><!-- Latest compiled JavaScript -->
+
+{#	<link rel="stylesheet" href="css/process_page_1.css">#}
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/process_page_1.css') }}">
+
+
+	<!-- Adding master page -->
+	<!-- <script src="jquery-lib.js"></script>
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$.get("master_page.html", function(data) {
+	  $("#header").html(data);
+	  });
+	});
+	</script> -->
+</head>
+<body>
+	<!-- <div id="header"></div> -->
+	<div class=" container-fluid col-lg-8" id="project_container">
+		<a href="create_process_form.html" id="create_project"><button type="text" id="projbutton">Create Process</button></a>
+
+		<div>
+			<!-- Process tab1 -->
+			<div class="projectstabs" tab-id="tab1">
+				<div class="projdesc">
+					<h5>Process Name</h5>
+					<p>Process 1</p>				
+				</div>
+				<div class="projactions">
+					<h5>Actions</h5>
+					<div class="projicons">
+						<a href="#"><i class="fa fa-edit">Edit</i></a>
+						&nbsp &nbsp
+						<a href="#"><i class="fa fa-trash-o">Delete Process</i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Process tab2 -->
+			
+			<div class="projectstabs" tab-id="tab2">
+				<div class="projdesc">		
+					<h5>Process Name</h5>
+					<p>Process 1</p>				
+				</div>
+				<div class="projactions">
+					<h5>Actions</h5>
+					<div class="projicons">
+						<a href="#"><i class="fa fa-edit">Edit</i></a>
+						&nbsp &nbsp
+						<a href="#"><i class="fa fa-trash-o">Delete Process</i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>

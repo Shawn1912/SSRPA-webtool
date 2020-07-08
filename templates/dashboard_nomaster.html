@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="{{ url_for('static',filename='mystyles/all.min.css') }}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{{ url_for('static',filename='styles/all.min.css') }}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link
+      href="{{ url_for('static',filename='styles/sb-admin-2.min.css') }}"
+      rel="stylesheet"
+    />
+    <style>
+      #container {
+        height: 400px;
+      }
+
+      .highcharts-figure,
+      .highcharts-data-table table {
+        margin: 1em auto;
+      }
+
+      .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+      }
+      .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+      }
+      .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+      }
+      .highcharts-data-table td,
+      .highcharts-data-table th,
+      .highcharts-data-table caption {
+        padding: 0.5em;
+      }
+      .highcharts-data-table thead tr,
+      .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+      }
+      .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+      }
+
+      #table-view {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      #table-view1 {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: none;
+      }
+
+      #table-div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 70%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      table,
+      th,
+      td {
+        border: solid 1px #000;
+        padding: 10px;
+      }
+
+      table {
+        border-collapse: collapse;
+        caption-side: bottom;
+      }
+
+      caption {
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 5px;
+      }
+
+      #heading {
+        text-align: center;
+      }
+
+      #heading1 {
+        text-align: center;
+      }
+      #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 32px;
+        cursor: pointer;
+      }
+      #close-btn1 {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 32px;
+        cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $.get("/masterpageuser", function (data) {
+          $("#header").html(data);
+        });
+      });
+    </script>
+  </head>
+
+  <body id="page-top">
+    <!-- <div id="wrapper"> -->
+
+    <!-- Page Wrapper -->
+    <div id="header"></div>
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <!-- Page Heading -->
+          <div
+            class="d-sm-flex align-items-center justify-content-between mb-4"
+          >
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <!--            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>-->
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div
+                        class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                      >
+                        Total Proceesed Vendors
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        {{no_processes}}
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-user-clock fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div
+                        class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                      >
+                        Average Time
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        {{average_time}}
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clock fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div
+                        class="text-xs font-weight-bold text-info text-uppercase mb-1"
+                      >
+                        BOT USAGE (Hrs)/Day
+                      </div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                        {{total_time}}
+                      </div>
+                      <div class="row no-gutters align-items-center"></div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div
+                        class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                      >
+                        Pending Requests
+                      </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        18
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i
+                        class="fas fa-exclamation-triangle fa-2x text-gray-300"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-12 mb-4">
+              <!-- Color System -->
+              <div class="row">
+                <div class="col-lg-4 mb-4">
+                  <div class="card bg-success text-white shadow">
+                    <div class="card-body">
+                      Success
+                      <div class="text-white-50 small">{{success_count}}</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                  <div class="card bg-warning text-white shadow">
+                    <div class="card-body">
+                      Excepation
+                      <div class="text-white-50 small">{{Excepation}}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                  <div class="card bg-danger text-white shadow">
+                    <div class="card-body">
+                      Failed
+                      <div class="text-white-50 small">{{fail_count}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="card border-left-dark shadow h-100 py-2">
+                <div class="card-body">
+                  <form
+                    action="{{ url_for('dashboard') }}"
+                    method="POST"
+                    style="display: inline;"
+                  >
+                    <label for="cars" name="data">Select Graph:</label>
+                    <select name="dropdown1">
+                      <option value="column">column</option>
+                      <option value="pie">pie</option>
+                      <option value="line">line</option>
+                      <option value="scatter">scatter</option>
+                      <option value="bar">bar</option>
+                    </select>
+                    <input type="submit" value="Submit" style="margin: 10px;" />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <form>
+                    <label for="birthday">From:</label>
+                    <input type="date" id="birthday" name="from_date" />
+                    <label for="birthday">To:</label>
+                    <input type="date" id="birthday" name="to_date" />
+                    <input type="submit" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Content Row -->
+
+          <div class="row">
+            <!-- Area Chart -->
+            <div class="col-xl-12 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div
+                  class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
+                >
+                  <h6 class="m-0 font-weight-bold text-primary">Chart</h6>
+                  <div class="dropdown no-arrow">
+                    <a
+                      class="dropdown-toggle"
+                      href="#"
+                      role="button"
+                      id="dropdownMenuLink"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <i
+                        class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"
+                      ></i>
+                    </a>
+                    <div
+                      class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                      aria-labelledby="dropdownMenuLink"
+                    ></div>
+                  </div>
+                </div>
+
+                <figure class="highcharts-figure">
+                  <div id="container"></div>
+                </figure>
+
+                <div id="table-view">
+                  <div id="table-div" class="col-xl-10 col-lg-7 col-xs-10">
+                    <h1 id="heading">Temp</h1>
+                    <span id="close-btn">×</span>
+                    <caption style="font-size: 140%; padding: 5px;">
+                      <a href="{{ url_for('dashboard') }}"
+                        ><input
+                          type="submit"
+                          id="lockList_fail"
+                          name="lockList"
+                          value="Export"
+                      /></a>
+                    </caption>
+                    <div
+                      class="col-xl-12 col-lg-7"
+                      style="
+                        overflow-x: scroll;
+                        overflow-y: scroll;
+                        height: 80%;
+                      "
+                    >
+                      {{xyz|safe}}
+                    </div>
+                  </div>
+                </div>
+                <div id="table-view1">
+                  <div id="table-div" class="col-xl-10 col-lg-7 col-xs-10">
+                    <h1 id="heading1">Temp</h1>
+                    <span id="close-btn">×</span>
+                    <caption style="font-size: 140%; padding: 5px;">
+                      <a href="{{ url_for('dashboard') }}"
+                        ><input
+                          type="submit"
+                          id="lockList_fail"
+                          name="lockList"
+                          value="Export"
+                      /></a>
+                    </caption>
+                    <div
+                      class="col-xl-12 col-lg-7"
+                      style="
+                        overflow-x: scroll;
+                        overflow-y: scroll;
+                        height: 80%;
+                      "
+                    >
+                      {{xyz|safe}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pie Chart -->
+            </div>
+
+            <!-- Content Row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2019</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="{{ url_for('userlogin') }}"
+              >Logout</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ url_for('static',filename='styles/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='styles/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{{ url_for('static',filename='styles/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{{ url_for('static',filename='styles/js/sb-admin-2.min.js') }}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ url_for('static',filename='styles/vendor/chart.js/Chart.min.js') }}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/drilldown.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="./drill-down.js"></script>
+  </body>
+</html>

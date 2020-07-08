@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!-- to render all kinds of pages  -->
+
+<!-- BOOTSTRAP CDN **REQUIRES INTERNET** -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!-- jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script><!-- Popper JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script><!-- Latest compiled JavaScript -->
+
+{#<link rel="stylesheet" href="css/create_project_form_1.css">#}
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/create_project_form_1.css') }}">
+
+
+<!-- Adding master page -->
+<!-- <script src="jquery-lib.js"></script>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$.get("master_page.html", function(data) {
+  $("#header").html(data);
+  });
+});
+</script> -->
+</head>
+<body>
+	<!-- <div id="header"></div> -->
+	<div class=" container-fluid col-lg-8" id="create_project_container">
+		<form>
+			<div id="projectform">
+				<h2>Create Project</h2>
+			    <div id="inputcontainer">
+			        <div id="projectname">
+			          <label for="cuinputbox">Enter Project Name<span style="color:red;">*</span></label>
+			          <input type="text" class="cuinputbox" placeholder="Project Name" required>   
+			        </div>
+			        <div id="cubtns">
+			          <button class="cubtn">Save</button>
+			          <button class="cubtn">Cancel</button>
+			        </div>
+			    </div>
+		  	</div>
+	  	</form>
+	</div>
+
+</body>
+</html>

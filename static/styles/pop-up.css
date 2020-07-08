@@ -1,0 +1,311 @@
+
+/* Popup Box */
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 8888; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 3vh auto; /* 15% from the top and centered */
+padding: 5px;
+border: 1px solid #888;
+width: 45%!important; /* Could be more or less, depending on screen size */
+}
+
+@media (min-width: 1366px) {
+.modal-content {
+background-color: #fefefe;
+margin: 3vh auto; /* 15% from the top and centered */
+padding: 5px;
+border: 1px solid #888;
+width: 50%; /* Could be more or less, depending on screen size */
+}
+}
+
+h2, p {
+margin: 0 0 10px;
+font-weight: 400;
+color: #666;
+}
+
+span{
+color: #666;
+display:block;
+padding:0 0 5px;
+}
+
+.form_popup {
+padding: 25px;
+margin: 25px;
+box-shadow: 0 2px 5px #f5f5f5;
+background: #eee;
+}
+
+input, textarea {
+width: calc(100% - 18px);
+padding: 8px;
+margin-bottom: 20px;
+border: 1px solid #1c87c9;
+outline: none;
+}
+
+.contact-form button {
+
+padding: 10px;
+
+background: #1c87c9;
+font-size: 16px;
+font-weight: 400;
+color: #fff;
+}
+
+button:hover {
+background: #2371a0;
+}
+/* The Close Button */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+button.button {
+background:none;
+border-top:none;
+outline: none;
+border-right:none;
+border-left:none;
+border-bottom:#02274a 1px solid;
+padding:0 0 3px 0;
+font-size:16px;
+cursor:pointer;
+}
+
+button.button:hover {
+border-bottom:#a99567 1px solid;
+color:#a99567;
+}
+
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  left: 25px;
+  top: 20px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  border-radius: 8px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+
+}
+
+/* Popup Box */
+/* The Modal (background) */
+.modal {
+/*display: none;*/ /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 8888; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 3vh auto; /* 15% from the top and centered */
+padding: 5px;
+border: 1px solid #888;
+width: 50%; /* Could be more or less, depending on screen size */
+}
+
+@media (min-width: 1366px) {
+.modal-content {
+background-color: #fefefe;
+margin: 3vh auto; /* 15% from the top and centered */
+padding: 5px;
+border: 1px solid #888;
+width: 50%; /* Could be more or less, depending on screen size */
+box-shadow: 3px 3px 3px 3px #BDBDBD;
+border-radius: 8px
+}
+}
+
+h2, p {
+margin:0px 0 10px;
+font-weight: 400;
+color: #666;
+}
+
+span{
+color: #666;
+display:block;
+padding:0 0 5px;
+}
+
+/*form {
+padding: 25px;
+margin: 25px;
+box-shadow: 0 2px 5px #f5f5f5;
+background: #eee;
+box-shadow: 3px 3px 3px 3px #BDBDBD;
+border-radius: 8px;
+}*/
+
+input, textarea {
+width: calc(100% - 18px);
+padding: 8px;
+margin-bottom: 20px;
+border: 1px solid #1c87c9;
+outline: none;
+border-radius: 4px;
+}
+
+.contact-form button {
+padding: 10px;
+background: #20204b;
+font-size: 16px;
+font-weight: 400;
+color: #fff;
+border-radius: 8px;
+}
+
+button:hover {
+background: #2371a0;
+}
+
+/* The Close Button */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+button.button {
+background:none;
+border-top:none;
+outline: none;
+border-right:none;
+border-left:none;
+border-bottom:#02274a 1px solid;
+padding:0 0 3px 0;
+font-size:16px;
+cursor:pointer;
+}
+
+button.button:hover {
+border-bottom:#a99567 1px solid;
+color:#a99567;
+}
+
+
+.tooltip {
+position: absolute;
+display: inline-block;
+right: 25%;
+opacity: 1!important;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: auto;
+background-color: #555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 5px;
+position: absolute;
+z-index: 1;
+left: 0%;
+margin-left: -250px;
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+top: -20%;
+left: 85%;
+margin-left: 5px;
+border-width: 5px;
+border-style: solid;
+border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+opacity: 1;
+}
+
+.fa{
+  font-size:24px;
+  color:#20204b;
+  position: relative;
+  left: 90%;
+}
+
+.fa-info-circle:before {
+  content: "\f05a";
+  color: #20204b;
+}

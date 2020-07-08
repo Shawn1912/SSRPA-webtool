@@ -1,0 +1,53 @@
+#project_container{
+    height: 81vh;
+    width: 100%; 
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+
+#projbutton{
+    display: flex;
+    width: 130px;
+    padding: 5px;
+    justify-content: center;
+    background: #1E1F4B;
+    color: white;
+    border: 2px solid #EEEEEE;
+    border-radius: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #BDBDBD;
+
+}
+
+.projectstabs{
+    width: 100%;
+    display: flex;
+    background: #FFFFFF;
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px #BDBDBD;
+    justify-content: space-between;
+    border: 1px solid;
+    color: black;
+    /*text-decoration: none;*/
+}
+
+#create_project{
+    width: 130px;
+    text-decoration: none;
+}
+
+.projdesc a{
+    text-decoration: none; 
+    color: black;
+}
+.projicons a{
+    text-decoration: none; 
+    color: black;
+}
