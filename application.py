@@ -218,12 +218,12 @@ def otp(email=None):
 def createuser():
     if request.method == "POST":
         connection = psycopg2.connect(
-                user="postgres",
-                password="postgres",
-                host="localhost",
-                port="5432",
-                database="postgres",
-            )
+            user="postgres",
+            password="postgres",
+            host="localhost",
+            port="5432",
+            database="postgres",
+        )
 
         cursor = connection.cursor()
         try:
@@ -319,6 +319,16 @@ def masterpageuser():
 @app.route("/projectpage", methods=["GET"])
 def projectpage():
     return render_template("project_page.html")
+
+
+@app.route("/createproject", methods=["GET"])
+def createprojectpage():
+    return render_template("create_project_form_1.html")
+
+
+@app.route("/processpage", methods=["GET"])
+def processpage():
+    return render_template("process_page.html")
 
 
 @app.route("/userprofile", methods=["GET"])

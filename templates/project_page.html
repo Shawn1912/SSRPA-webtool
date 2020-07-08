@@ -38,25 +38,25 @@
       });
     </script>
   </head>
-  <body>
+  <body style="display: flex;">
     <div id="header"></div>
     <div
       class="container-fluid col-lg-8 mt-0"
       style="display: flex; justify-content: center; align-items: center;"
       id="project_container"
     >
-      <div class="container-fluid col-lg-16 mt-0">
-        <a href="create_project_form_1.html" id="create_project"
+      <div class="container-fluid col-lg-16 mt-0" id="cont">
+        <a href="/createproject" id="create_project"
           ><button type="text" id="projbutton">Create Project</button></a
         >
 
-        <div>
+        <div style="display: flex;">
           <!-- Project tab1 -->
           <div
             class="projectstabs"
             tab-id="tab1"
-            onclick="location.href='/processpage'"
-            style="cursor: pointer;"
+            onclick="location.href='/projectpage'"
+            style="display: flex; /*cursor: pointer;*/"
           >
             <div class="projdesc">
               <h5>Project Name</h5>
